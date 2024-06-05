@@ -13,6 +13,7 @@ import SingleCourse from "./components/user/SingleCourse";
 import Courses from "./components/user/Courses";
 import EditCourse from "./components/admin/EditCourse";
 import Admin from "./components/admin/Admin";
+import AddBooks from "./components/admin/AddBooks";
 import { RecoilRoot } from "recoil";
 import {
   createBrowserRouter,
@@ -44,6 +45,7 @@ function App() {
           <Route path="/admin/courses/create" element={<CreateCourse />} />
           <Route path="/admin/courses/:id" element={<AdminSingleCourse />} />
           <Route path="/admin/courses/:id/edit" element={<EditCourse />} />
+          <Route path="/admin/courses/:id/add-book" element={<AddBooks />} />
         </Route>
         <Route path="/*" element={<h1>Page not found</h1>} />
       </Route>

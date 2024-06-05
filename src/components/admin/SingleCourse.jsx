@@ -29,6 +29,12 @@ function SingleCourse() {
   const handleClick = () => {
     navigate(`/admin/courses/${id}/edit`, { state: { course } });
   };
+  const handleClick2 = () => {
+    navigate(`/admin/courses/${id}/add-book`, { state: { course } });
+  };
+  const handleClick3 = () => {
+    navigate(`/admin/courses/${id}/add-review`, { state: { course } });
+  };
 
   return (
     <section>
@@ -68,11 +74,34 @@ function SingleCourse() {
             >
               Edit Course
             </button>
+            <button
+              onClick={handleClick2}
+              className="btn mt-4 !border-white !text-white inline-block"
+            >
+              Add Book
+            </button>
           </footer>
         </div>
       </header>
       <div className="max-w-3xl mx-auto px-6 mt-12">
         <p className=" text-royal-green-900 text-xl">{course.description}</p>
+      </div>
+      <div className="max-w-3xl mx-auto px-6 mt-12">
+        <h2 className="text-2xl font-bold text-royal-green-900">Recommended Books</h2>
+        {course.books && course.books.length > 0 ? (
+          course.books.map((book) => (
+            <div key={book._id} className="my-4 p-4 border border-gray-300 rounded-md flex items-start space-x-4">
+              <img src={book.image} alt={book.title} className="w-16 h-24 object-cover"/>
+              <div>
+                <h3 className="text-xl font-semibold">{book.title}</h3>
+                <i className="text-sm text-gray-600">by {book.author}</i>
+                <p className="text-sm text-gray-600">{book.summary}</p>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p className="mt-2 text-gray-600">No recommended books yet.</p>
+        )}
       </div>
       <div className="max-w-3xl mx-auto px-6 mt-12">
         <h2 className="text-2xl font-bold text-royal-green-900">User Reviews</h2>
@@ -91,22 +120,7 @@ function SingleCourse() {
           <p className="mt-2 text-gray-600">No reviews yet.</p>
         )}
       </div>
-      <div className="max-w-3xl mx-auto px-6 mt-12">
-        <h2 className="text-2xl font-bold text-royal-green-900">Recommended Books</h2>
-        {course.books && course.books.length > 0 ? (
-          course.books.map((book) => (
-            <div key={book._id} className="my-4 p-4 border border-gray-300 rounded-md flex items-start space-x-4">
-              <img src={book.image} alt={book.title} className="w-16 h-24 object-cover"/>
-              <div>
-                <h3 className="text-xl font-semibold">{book.title}</h3>
-                <p className="text-sm text-gray-600">by {book.author}</p>
-              </div>
-            </div>
-          ))
-        ) : (
-          <p className="mt-2 text-gray-600">No recommended books yet.</p>
-        )}
-      </div>
+      
     </section>
   );
 }

@@ -5,7 +5,7 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 import { userAtom, userCourseAtom } from "../../store/atom";
 import jwt_decode from "jwt-decode";
 import { CgMenuRight, CgClose } from "react-icons/cg";
-
+import { ROOT_URL } from "../../utils/constant";
 function Navbar() {
   const user = useRecoilValue(userAtom);
   const setUser = useSetRecoilState(userAtom);
@@ -15,7 +15,7 @@ function Navbar() {
 
   const init = async () => {
     const response = await axios.get(
-      "https://skill-lynx-server.vercel.app/users/me",
+      `${ROOT_URL}user/me`,
       {
         headers: {
           authorization: token,
