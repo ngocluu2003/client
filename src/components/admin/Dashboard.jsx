@@ -42,10 +42,10 @@ function Dashboard() {
         <>
           <header className="flex justify-between items-center">
             <h1 className="text-xl font-bold text-royal-green-900">
-              All Courses created by You
+              Những khóa học bạn đã tạo
             </h1>
             <Link to="/admin/courses/create" className="btn btn-filled">
-              Create Course
+              Tạo khóa học
             </Link>
           </header>
           {adminCourses.length !== 0 ? (
@@ -56,16 +56,16 @@ function Dashboard() {
             </div>
           ) : (
             <h2 className="text-3xl font-bold text-gold-900 text-center mt-32">
-              No course listed yet please create one
+              Chưa có khóa học nào được tạo
             </h2>
           )}
         </>
       ) : (
         <div>
           <h1 className="text-xl font-bold text-royal-green-900 text-center py-12">
-            You are not authenticated. <br /> To see your dashboard Please{" "}
+           Bạn chưa đăng nhập. <br /> Vui lòng{" "}
             <Link className="text-gold-900" to={"/admin/login"}>
-              login
+              đăng nhập
             </Link>{" "}
           </h1>
         </div>

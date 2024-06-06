@@ -69,7 +69,7 @@ function Navbar() {
                 className="text-md text-white md:text-royal-green-900  hover:text-gold-900"
                 to="/courses"
               >
-                Courses
+                Khóa học
               </Link>
             </li>
             <li className="md:ml-6 mt-3 md:mt-0">
@@ -99,7 +99,7 @@ function Navbar() {
                       setUserCourses([]);
                     }}
                   >
-                    Logout
+                    Đăng xuất
                   </button>
                 </li>
               </>
@@ -110,7 +110,7 @@ function Navbar() {
                     className="text-md text-white md:text-royal-green-900  hover:text-gold-900"
                     to="/login"
                   >
-                    Login
+                    Đăng nhập
                   </Link>
                 </li>
                 <li className="md:ml-6 mt-3 md:mt-0">
@@ -118,7 +118,7 @@ function Navbar() {
                     className="text-md inline-block  border px-4 py-3 hover:bg-gold-900 hover:text-white rounded-full border-gold-900 text-gold-900"
                     to="/signup"
                   >
-                    Register
+                    Đăng kí
                   </Link>
                 </li>
               </>

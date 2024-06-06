@@ -34,7 +34,7 @@ function Courses() {
     <section className="container mx-auto px-6 py-12">
       <header className="">
         <h1 className="text-3xl font-extrabold text-center text-royal-green-900">
-          Popular Courses
+          Khóa học  
         </h1>
       </header>
       <FilterBar filter={filter} setFilter={setFilter} />
@@ -46,7 +46,7 @@ function Courses() {
         </div>
       ) : (
         <h2 className="text-3xl font-bold text-gold-900 text-center mt-32">
-          No course listed
+          Không có khóa học
         </h2>
       )}
     </section>

@@ -45,8 +45,8 @@ function Login() {
           <span className="text-lg text-gold-900">{message}</span>
           <br />
           {message === "Logged in successfully" ? (
-            <Link className="text-lg text-gold-900" to="/admin/dashboard">
-              Go to dashboard
+            <Link className="text-lg text-royal-green-900" to="/admin/dashboard">
+              Đi tới trang chủ
             </Link>
             
           ) : (
@@ -66,14 +66,14 @@ function Login() {
           className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
           type="text"
           value={username}
-          placeholder="Enter Username"
+          placeholder="Nhập Username"
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
           className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
           type="password"
           value={password}
-          placeholder="Enter Password"
+          placeholder="Nhập Password"
           onChange={(e) => setPassword(e.target.value)}
         />
         <div className="text-center mt-4">
@@ -81,15 +81,15 @@ function Login() {
             onClick={(e) => handleSubmit(e)}
             className="px-6 py-3 text-md bg-royal-green-900 text-white rounded w-full"
           >
-            Login
+            Đăng nhập
           </button>
         </div>
       </form>
       <footer className="mt-8">
         <p className="text-sm text-center text-royal-green-600">
-          Not registered?{" "}
+          Chưa có tài khoản ?{" "}
           <Link className="text-gold-900" to="/admin/signup/">
-            Register here
+            Đăng kí tại đây
           </Link>
         </p>
       </footer>

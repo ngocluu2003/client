@@ -8,10 +8,10 @@ function Admin() {
       </h1>
       <div className="mt-8 text-center">
         <Link to="/admin/login" className="btn">
-          Login
+          Đăng nhập
         </Link>
         <Link to="/admin/login" className="btn ml-4">
-          Signup
+          Đăng kí
         </Link>
       </div>
     </section>

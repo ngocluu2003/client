@@ -72,13 +72,13 @@ function SingleCourse() {
               onClick={handleClick}
               className="btn mt-4 !border-white !text-white inline-block"
             >
-              Edit Course
+              Cập nhật khóa học
             </button>
             <button
               onClick={handleClick2}
               className="btn mt-4 !border-white !text-white inline-block"
             >
-              Add Book
+              Thêm sách
             </button>
           </footer>
         </div>
@@ -87,7 +87,7 @@ function SingleCourse() {
         <p className=" text-royal-green-900 text-xl">{course.description}</p>
       </div>
       <div className="max-w-3xl mx-auto px-6 mt-12">
-        <h2 className="text-2xl font-bold text-royal-green-900">Recommended Books</h2>
+        <h2 className="text-2xl font-bold text-royal-green-900">Sách bạn nên đọc</h2>
         {course.books && course.books.length > 0 ? (
           course.books.map((book) => (
             <div key={book._id} className="my-4 p-4 border border-gray-300 rounded-md flex items-start space-x-4">
@@ -100,11 +100,11 @@ function SingleCourse() {
             </div>
           ))
         ) : (
-          <p className="mt-2 text-gray-600">No recommended books yet.</p>
+          <p className="mt-2 text-gray-600">Chưa có sách nào được thêm.</p>
         )}
       </div>
       <div className="max-w-3xl mx-auto px-6 mt-12">
-        <h2 className="text-2xl font-bold text-royal-green-900">User Reviews</h2>
+        <h2 className="text-2xl font-bold text-royal-green-900">Đánh giá của học viên</h2>
         {course.reviews && course.reviews.length ? (
           course.reviews.map((review) => (
             <div key={review._id} className="my-4 p-4 border border-gray-300 rounded-md flex items-start space-x-4">
@@ -117,7 +117,7 @@ function SingleCourse() {
             </div>
           ))
         ) : (
-          <p className="mt-2 text-gray-600">No reviews yet.</p>
+          <p className="mt-2 text-gray-600">Chưa có đánh giá nào.</p>
         )}
       </div>
       

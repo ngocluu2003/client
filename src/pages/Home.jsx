@@ -48,15 +48,13 @@ function Home() {
               Define Your Future
             </h1>
             <p className="text-lg text-royal-green-600 mt-6">
-              Explore a world of opportunities and discover how continuous
-              personal and professional development can pave the way for a
-              successful and fulfilling journey ahead.
+            Khám phá thế giới cơ hội và khám phá cách phát triển cá nhân và nghề nghiệp liên tục có thể mở đường cho một hành trình thành công và trọn vẹn phía trước.
             </p>
             <Link
               to="/courses"
               className="bg-gold-900 text-white px-6 mt-14 py-3 text-lg inline-block rounded-full"
             >
-              Explore Courses
+              Xem khóa học  
             </Link>
             <footer className="mt-16 md:mt-28 flex justify-between">
               <div className="text-center">
@@ -64,7 +62,7 @@ function Home() {
                   40k+
                 </h2>
                 <p className="text-lg md:text-xl text-royal-green-600 mt-3">
-                  Happy students
+                  Học sinh
                 </p>
               </div>
               <div className="text-center">
@@ -72,7 +70,7 @@ function Home() {
                   12k+
                 </h2>
                 <p className="text-lg md:text-xl text-royal-green-600 mt-3">
-                  Active Users
+                  Người dùng
                 </p>
               </div>
               <div className="text-center">
@@ -80,7 +78,7 @@ function Home() {
                   2k+
                 </h2>
                 <p className="text-lg md:text-xl text-royal-green-600 mt-3">
-                  Online Classes
+                  Khóa học
                 </p>
               </div>
             </footer>
@@ -99,11 +97,10 @@ function Home() {
         <div className="container mx-auto py-32 px-8">
           <header>
             <h2 className="text-center text-4xl font-bold text-royal-green-900">
-              Achieve Your Goals With CourseX
+            Đạt được mục tiêu của bạn với chúng tôi
             </h2>
             <p className="text-xl text-royal-green-600 text-center max-w-3xl mx-auto mt-8">
-              Unlock your full potential through CourseX's diverse courses and
-              expert guidance. Success awaits you!
+            Khai phá toàn bộ tiềm năng của bạn thông qua các khóa học đa dạng và hướng dẫn của các chuyên gia.
             </p>
           </header>
           <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto mt-12">
@@ -113,11 +110,10 @@ function Home() {
               </div>
 
               <h3 className="text-2xl font-semibold text-royal-green-900 mt-4">
-                Learn the latest skills
+                Học những thứ mới mẻ
               </h3>
               <p className="text-base mt-4 text-royal-green-600">
-                Stay ahead with CourseX: Learn and master the latest in-demand
-                skills for a successful future.
+                Luôn đón đầu xu hướng: Học và nắm vững các kỹ năng theo yêu cầu mới nhất để có một tương lai đầy hứa hẹn.
               </p>
             </article>
             <article className="bg-[#F6FBF9] shadow-lg border-2 border-royal-green-300 p-8 rounded-xl">
@@ -125,11 +121,10 @@ function Home() {
                 <PiSuitcaseSimpleFill className="text-xl text-gold-900" />
               </div>
               <h3 className="text-2xl font-semibold text-royal-green-900 mt-4">
-                Get ready for a career
+                Sẵn sàng cho sự nghiệp của bạn
               </h3>
               <p className="text-base mt-4 text-royal-green-600">
-                CourseX: Empowering your path to a rewarding career through
-                expert guidance and courses.
+                Đào sâu vào nghành nghề của bạn bằng những kiến thức của các chuyên gia đi trước ! 
               </p>
             </article>
             <article className="bg-white border-2 border-royal-green-300 p-8 rounded-xl">
@@ -137,11 +132,10 @@ function Home() {
                 <PiCertificateBold className="text-xl text-royal-green-700" />
               </div>
               <h3 className="text-2xl font-semibold text-royal-green-900 mt-4">
-                Earn a certificate
+                Đạt được chứng chỉ
               </h3>
               <p className="text-base mt-4 text-royal-green-600">
-                CourseX: Gain recognition with certified courses for better
-                career opportunities.
+              Đạt được chứng nhận khi hoàn thành các khóa học để có cơ hội nghề nghiệp tốt hơn !
               </p>
             </article>
           </div>
@@ -151,7 +145,7 @@ function Home() {
         <div className="container mx-auto px-8">
           <header>
             <h2 className="text-center text-4xl font-bold text-royal-green-900">
-              Our Popular Courses
+              Các khóa học nổi tiếng
             </h2>
           </header>
           {courses !== undefined && courses.length !== 0 ? (
@@ -162,7 +156,7 @@ function Home() {
             </div>
           ) : (
             <h2 className="text-xl font-bold text-gold-900 text-center mt-8">
-              No course listed
+              Chưa có khóa học nào
             </h2>
           )}
           <div className="text-center">
@@ -170,7 +164,7 @@ function Home() {
               to="/courses"
               className="bg-gold-900 text-white px-6 mt-14 py-3 text-lg inline-block rounded-full"
             >
-              Explore More
+              Khám phá thêm
             </Link>
           </div>
         </div>
@@ -178,22 +172,21 @@ function Home() {
       <section className="py-32 px-8">
         <div className="container bg-[#323232] mx-auto max-w-4xl px-6 md:px-24 py-16 text-center rounded-2xl">
           <h2 className="text-white text-4xl font-semibold">
-            Are you ready for today's course?
+            Bạn đã sẵn sàng ?
           </h2>
           <p className="text-white text-lg mt-6">
-            Get ready to embark on an enriching learning journey. Today's course
-            awaits, empowering your knowledge and skills.
+          Hãy sẵn sàng bắt tay vào một hành trình học tập phong phú. Khóa học hôm nay đang chờ đợi, nâng cao kiến thức và kỹ năng của bạn.
           </p>
           <input
             className="border-b bg-transparent w-full max-w-sm mt-8 text-white py-2 outline-0"
             type="email"
-            placeholder="Enter your email"
+            placeholder="Địa chỉ email của bạn"
           />
           <br />
           <input
             className="bg-gold-900 rounded-full cursor-pointer w-full max-w-sm mt-8 text-white py-3 outline-0"
             type="submit"
-            placeholder="Enter your email"
+            placeholder="Địa chỉ email của bạn"
           />
         </div>
       </section>
@@ -219,7 +212,7 @@ function Home() {
                     className="text-md text-royal-green-900  hover:text-gold-900"
                     to="/course"
                   >
-                    Course
+                    Khóa học
                   </Link>
                 </li>
                 <li className="ml-6">
@@ -227,7 +220,7 @@ function Home() {
                     className="text-md text-royal-green-900  hover:text-gold-900"
                     to="/course"
                   >
-                    Service
+                    Dịch vụ
                   </Link>
                 </li>
                 <li className="ml-6">
@@ -235,7 +228,7 @@ function Home() {
                     className="text-md text-royal-green-900  hover:text-gold-900"
                     to="/course"
                   >
-                    Contact
+                    Liên hệ
                   </Link>
                 </li>
               </ul>

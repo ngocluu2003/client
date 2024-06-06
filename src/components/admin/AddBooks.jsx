@@ -42,14 +42,14 @@ function AddBooks() {
       {token && jwt_decode(token).role === "admin" ? (
         <>
           <h1 className="text-center text-royal-green-900 font-bold text-xl">
-            Add Book
+            Thêm Sách
           </h1>
           {message ? (
             <div className="text-center mt-4">
               <span className="text-lg text-gold-900">{message}</span>
               <br />
-              <Link className="text-lg text-gold-900" to="/admin/dashboard">
-                Go to your dashboard
+              <Link className="text-lg text-royal-green-900" to="/admin/dashboard">
+                Đi tới trang chủ
               </Link>
             </div>
           ) : (
@@ -63,35 +63,35 @@ function AddBooks() {
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="text"
-              placeholder="Enter Title"
+              placeholder="Nhập tên sách"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="text"
-              placeholder="Enter Author"
+              placeholder="Nhập tên tác giả"
               value={author}
               onChange={(e) => setAuthor(e.target.value)}
             />
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="text"
-              placeholder="Enter Summary"
+              placeholder="Tóm tắt sách"
               value={summary}
               onChange={(e) => setSummary(e.target.value)}
             />
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="text"
-              placeholder="Enter Image Link"
+              placeholder="Nhập địa chỉ hình ảnh của sách"
               value={image}
               onChange={(e) => setImage(e.target.value)}
             />
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="text"
-              placeholder="Enter Book Link"
+              placeholder="Link sách"
               value={link}
               onChange={(e) => setLink(e.target.value)}
             />
@@ -100,7 +100,7 @@ function AddBooks() {
                 onClick={handleSubmit}
                 className="px-6 py-3 text-md bg-royal-green-900 text-white rounded w-full"
               >
-                Add Book
+                Thêm sách
               </button>
             </div>
           </form>
@@ -108,9 +108,9 @@ function AddBooks() {
       ) : (
         <div>
           <h1 className="text-xl font-bold text-royal-green-900 text-center py-12">
-            You are not authenticated. <br /> To add a book, please{" "}
+            Bạn chưa đăng nhập. <br /> Để thêm sách, xin vui lòng {" "}
             <Link className="text-gold-900" to={"/admin/login"}>
-              login
+              đăng nhập
             </Link>{" "}
           </h1>
         </div>

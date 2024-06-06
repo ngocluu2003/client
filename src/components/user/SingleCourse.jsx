@@ -109,9 +109,9 @@ function SingleCourse() {
               {token ? (
                 <>
                   {jwt_decode(token).role === "user" ? (
-                    <Link to={`/${user}/dashboard`}>Go to your dashbaord</Link>
+                    <Link to={`/${user}/dashboard`}>Đi tới trang chủ</Link>
                   ) : (
-                    <Link to={`/login`}>Please login to buy course</Link>
+                    <Link to={`/login`}>Đăng nhập để mua khóa học</Link>
                   )}
                 </>
               ) : (
@@ -126,7 +126,7 @@ function SingleCourse() {
               onClick={handleClick}
               className="btn mt-4 !border-white !text-white inline-block"
             >
-              Buy Course
+              Mua khóa học
             </button>
           </footer>
         </div>
@@ -135,7 +135,7 @@ function SingleCourse() {
         <p className=" text-royal-green-900 text-xl">{course.description}</p>
       </div>
       <div className="max-w-3xl mx-auto px-6 mt-12">
-        <h2 className="text-2xl font-bold text-royal-green-900">Recommended Books</h2>
+        <h2 className="text-2xl font-bold text-royal-green-900">Sách bạn nên đọc</h2>
         {course.books && course.books.length > 0 ? (
           course.books.map((book) => (
             <a href={book.link} target="_" className="block my-4 p-4 border border-gray-300 rounded-md flex items-start space-x-4" key={book._id}>
@@ -148,11 +148,11 @@ function SingleCourse() {
             </a>
           ))
         ) : (
-          <p className="mt-2 text-gray-600">No recommended books yet.</p>
+          <p className="mt-2 text-gray-600">Chưa có sách nào được thêm.</p>
         )}
       </div>
       <div className="max-w-3xl mx-auto px-6 mt-12">
-        <h2 className="text-2xl font-bold text-royal-green-900">User Reviews</h2>
+        <h2 className="text-2xl font-bold text-royal-green-900">Đánh giá của học viên</h2>
         {reviews.length ? (
           reviews.map((review) =>
             review ? (
@@ -167,15 +167,15 @@ function SingleCourse() {
             ) : null
           )
         ) : (
-          <p className="mt-2 text-gray-600">No reviews yet.</p>
+          <p className="mt-2 text-gray-600">Chưa có đánh giá nào.</p>
         )}
         {token && jwt_decode(token).role === "user" ? (
           <form onSubmit={handleCommentSubmit} className="mt-6">
-            <h3 className="text-xl font-semibold text-royal-green-900">Add a Review</h3>
+            <h3 className="text-xl font-semibold text-royal-green-900">Thêm đánh giá</h3>
             <textarea
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               rows="4"
-              placeholder="Enter your comment"
+              placeholder="Đánh giá của bạn "
               value={newComment}
               onChange={(e) => setNewComment(e.target.value)}
             ></textarea>
@@ -184,7 +184,7 @@ function SingleCourse() {
               type="number"
               min="1"
               max="5"
-              placeholder="Enter your rating (1-5)"
+              placeholder="rating (1-5)"
               value={newRating}
               onChange={(e) => setNewRating(Number(e.target.value))}
             />
@@ -193,12 +193,12 @@ function SingleCourse() {
                 type="submit"
                 className="px-6 py-3 text-md bg-royal-green-900 text-white rounded w-full"
               >
-                Submit Review
+                Đánh Gía
               </button>
             </div>
           </form>
         ) : (
-          <p className="mt-2 text-gray-600">Please <Link className="text-gold-900" to={"/login"}>login</Link> to leave a review.</p>
+          <p className="mt-2 text-gray-600">Làm ơn <Link className="text-gold-900" to={"/login"}>đăng nhập</Link> để đánh giá.</p>
         )}
       </div>
       

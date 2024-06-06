@@ -46,6 +46,14 @@ function Navbar() {
                     </button>
                   </li>
                   <li className="ml-4">
+                    <Link
+                      className="text-md text-royal-green-900 font-semibold"
+                      to="/admin/dashboard"
+                    >
+                      Khóa học
+                    </Link>
+                  </li>
+                  <li className="ml-4">
                     <button
                       onClick={() => {
                         localStorage.removeItem("token");
@@ -55,9 +63,10 @@ function Navbar() {
                       }}
                       className="text-md text-royal-green-900 font-semibold"
                     >
-                      Logout
+                      Đăng xuất
                     </button>
                   </li>
+                  
                   <li className="ml-4">
                     <Link
                       className="text-md text-royal-green-900 font-semibold"
@@ -74,7 +83,7 @@ function Navbar() {
                       className="text-md text-royal-green-900 font-semibold"
                       to="/admin/login"
                     >
-                      Login
+                      Đăng nhập
                     </Link>
                   </li>
                   <li className="ml-4">
@@ -82,7 +91,7 @@ function Navbar() {
                       className="text-md text-royal-green-900 font-semibold"
                       to="/admin/signup"
                     >
-                      Signup
+                      Đăng kí
                     </Link>
                   </li>
                   <li className="ml-4">

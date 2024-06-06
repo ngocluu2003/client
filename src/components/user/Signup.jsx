@@ -40,25 +40,25 @@ function Signup() {
     <section className="py-32 bg-fade-pink h-screen px-6">
       {user ? (
         <div className="text-center">
-          <h2 className="text-2xl">You are logged in</h2>
+          <h2 className="text-2xl">Bạn đã đăng nhập</h2>
           <Link
-            className="text-lg text-gold-900 mt-4 inline-block"
+            className="text-lg text-royal-green-900 mt-4 inline-block"
             to={`/${user}/dashboard`}
           >
-            Go to dashboard
+            Đi tới trang chủ
           </Link>
         </div>
       ) : (
         <>
           <h1 className="text-center text-royal-green-900 font-bold text-xl">
-            Register
+            Đăng kí
           </h1>
           {message ? (
             <div className="text-center mt-4">
               <span className="text-lg text-gold-900">{message}</span>
               <br />
               <Link className="text-lg text-gold-900" to={`/${user}/dashboard`}>
-                Go to dashboard
+               Đi tới trang chủ
               </Link>
             </div>
           ) : (
@@ -73,21 +73,21 @@ function Signup() {
               autoFocus
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="email"
-              placeholder="Enter Email"
+              placeholder="Nhập Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="text"
-              placeholder="Enter Username"
+              placeholder="Nhập Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="password"
-              placeholder="Enter Password"
+              placeholder="Nhập Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -96,15 +96,15 @@ function Signup() {
                 onClick={(e) => handleSubmit(e)}
                 className="px-6 py-3 text-md bg-royal-green-900 text-white rounded w-full"
               >
-                Register
+                Đăng kí
               </button>
             </div>
           </form>
           <footer className="mt-8">
             <p className="text-sm text-center text-royal-green-600">
-              Already have an account?{" "}
+             Đã có tài khoản ?{" "}
               <Link className="text-gold-900" to="/login">
-                Login here
+                Đăng nhập
               </Link>
             </p>
           </footer>

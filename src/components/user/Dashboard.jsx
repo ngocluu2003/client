@@ -31,15 +31,15 @@ function Dashboard() {
     <section className="container mx-auto px-6 py-12">
       <header className="flex justify-between items-center">
         <h1 className="text-xl font-bold text-royal-green-900">
-          All Courses bought by you
+          Tất cả khóa học
         </h1>
         <Link to="/courses" className="btn btn-filled">
-          Expore more Course
+          Xem thêm
         </Link>
       </header>
       {userCourses.length === 0 ? (
         <h1 className="text-xl font-bold text-gold-900 mt-24 text-center">
-          You haven't bought any course yet
+          Bạn chưa mua khóa học nào !
         </h1>
       ) : (
         <div className="mt-8 grid md:grid-cols-3 gap-8">

@@ -39,14 +39,14 @@ function Courses() {
       {token && jwt_decode(token).role === "admin" ? (
         <>
           <h1 className="text-center text-royal-green-900 font-bold text-xl">
-            Create Course
+            Tạo thêm khóa học
           </h1>
           {message ? (
             <div className="text-center mt-4">
               <span className="text-lg text-gold-900">{message}</span>
               <br />
               <Link className="text-lg text-gold-900" to="/admin/dashboard">
-                Go to your dashboard
+                Đi đến trang chủ
               </Link>
             </div>
           ) : (
@@ -60,35 +60,35 @@ function Courses() {
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="text"
-              placeholder="Enter Title"
+              placeholder="Nhập tiêu đề khóa học"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="text"
-              placeholder="Enter Tag"
+              placeholder="Nhập thể loại"
               value={tag}
               onChange={(e) => setTag(e.target.value)}
             />
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="number"
-              placeholder="Enter Price"
+              placeholder="Nhập giá khóa học"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
             />
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="text"
-              placeholder="Enter Image Link"
+              placeholder="Nhập link hình ảnh khóa học"
               value={imgLink}
               onChange={(e) => setImgLink(e.target.value)}
             />
             <textarea
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               rows="4"
-              placeholder="Enter description"
+              placeholder="Nhập miêu tả khóa học"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             ></textarea>
@@ -106,7 +106,7 @@ function Courses() {
                 onClick={(e) => handleSubmit(e)}
                 className="px-6 py-3 text-md bg-royal-green-900 text-white rounded w-full"
               >
-                Create
+                Tạo
               </button>
             </div>
           </form>
@@ -114,9 +114,9 @@ function Courses() {
       ) : (
         <div>
           <h1 className="text-xl font-bold text-royal-green-900 text-center py-12">
-            You are not authenticated. <br /> To create course Please{" "}
+            Bạn chưa đăng nhập. <br /> Để tạo khóa học vui lòng {" "}
             <Link className="text-gold-900" to={"/admin/login"}>
-              login
+              đăng nhập
             </Link>{" "}
           </h1>
         </div>

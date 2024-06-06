@@ -41,14 +41,14 @@ function EditCourse() {
       {token && jwt_decode(token).role ? (
         <>
           <h1 className="text-center text-royal-green-900 font-bold text-xl">
-            Edit Course
+            Cập nhật khóa học
           </h1>
           {message ? (
             <div className="text-center mt-4">
               <span className="text-lg text-gold-900">{message}</span>
               <br />
-              <Link className="text-lg text-gold-900" to="/admin/dashboard">
-                Go to your dashboard
+              <Link className="text-lg text-royal-green-900" to="/admin/dashboard">
+                Đi tới trang chủ
               </Link>
             </div>
           ) : (
@@ -62,35 +62,35 @@ function EditCourse() {
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="text"
-              placeholder="Enter Title"
+              placeholder="Nhập tiêu đề khóa học"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="text"
-              placeholder="Enter Tag"
+              placeholder="Nhập thể loại khóa học"
               value={tag}
               onChange={(e) => setTag(e.target.value)}
             />
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="number"
-              placeholder="Enter Price"
+              placeholder="Nhập giá khóa học"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
             />
             <input
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               type="text"
-              placeholder="Enter Image Link"
+              placeholder="Nhập link hình ảnh khóa học"
               value={imgLink}
               onChange={(e) => setImgLink(e.target.value)}
             />
             <textarea
               className="block w-full border border-royal-green-600 py-3 px-6 rounded my-4 text-royal-green-600 text-md"
               rows="4"
-              placeholder="Enter description"
+              placeholder="Nhập mô tả"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             ></textarea>
@@ -108,7 +108,7 @@ function EditCourse() {
                 onClick={(e) => handleSubmit(e)}
                 className="px-6 py-3 text-md bg-royal-green-900 text-white rounded w-full"
               >
-                Update
+                Cập nhật
               </button>
             </div>
           </form>
@@ -116,9 +116,9 @@ function EditCourse() {
       ) : (
         <div>
           <h1 className="text-xl font-bold text-royal-green-900 text-center py-12">
-            You are not authenticated. <br /> To create course Please{" "}
+            Bạn chưa đăng nhập. <br /> Để cập nhật khóa học vui lòng{" "}
             <Link className="text-gold-900" to={"/admin/login"}>
-              login
+              đăng nhập
             </Link>{" "}
           </h1>
         </div>
