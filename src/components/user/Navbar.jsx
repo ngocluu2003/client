@@ -72,14 +72,14 @@ function Navbar() {
                 Khóa học
               </Link>
             </li>
-            <li className="md:ml-6 mt-3 md:mt-0">
+            {/* <li className="md:ml-6 mt-3 md:mt-0">
               <Link
                 className="text-md text-white md:text-royal-green-900  hover:text-gold-900"
                 to="/admin"
               >
                 Admin
               </Link>
-            </li>
+            </li> */}
             {user ? (
               <>
                 <li className="md:ml-6 mt-3 md:mt-0">

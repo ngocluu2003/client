@@ -85,14 +85,14 @@ function Login() {
           </button>
         </div>
       </form>
-      <footer className="mt-8">
+      {/* <footer className="mt-8">
         <p className="text-sm text-center text-royal-green-600">
           Chưa có tài khoản ?{" "}
           <Link className="text-gold-900" to="/admin/signup/">
             Đăng kí tại đây
           </Link>
         </p>
-      </footer>
+      </footer> */}
     </section>
   );
 }

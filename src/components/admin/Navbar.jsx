@@ -86,14 +86,14 @@ function Navbar() {
                       Đăng nhập
                     </Link>
                   </li>
-                  <li className="ml-4">
+                  {/* <li className="ml-4">
                     <Link
                       className="text-md text-royal-green-900 font-semibold"
                       to="/admin/signup"
                     >
                       Đăng kí
                     </Link>
-                  </li>
+                  </li> */}
                   <li className="ml-4">
                     <Link
                       className="text-md text-royal-green-900 font-semibold"
