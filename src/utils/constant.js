@@ -1,4 +1,4 @@
-const ROOT_URL = "http://localhost:3000/";
+const ROOT_URL = "https://server-ashy-seven.vercel.app/";
 
 // Admin Routes
 
