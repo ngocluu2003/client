@@ -10,9 +10,6 @@ function Admin() {
         <Link to="/admin/login" className="btn">
           Đăng nhập
         </Link>
-        <Link to="/admin/login" className="btn ml-4">
-          Đăng kí
-        </Link>
       </div>
     </section>
   );

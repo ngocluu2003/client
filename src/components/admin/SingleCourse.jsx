@@ -108,7 +108,7 @@ function SingleCourse() {
         {course.reviews && course.reviews.length ? (
           course.reviews.map((review) => (
             <div key={review._id} className="my-4 p-4 border border-gray-300 rounded-md flex items-start space-x-4">
-              <img src={review.avatar} alt={`${review.username}'s avatar`} className="w-12 h-12 rounded-full"/>
+              <img src="https://ss-images.saostar.vn/wp700/pc/1613810558698/Facebook-Avatar_3.png" alt={`${review.username}'s avatar`} className="w-12 h-12 rounded-full"/>
               <div>
                 <h3 className="text-xl font-semibold">{review.username}</h3>
                 <p className="text-sm text-gray-600">Rating: {review.rating}/5</p>
